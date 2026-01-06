@@ -1,0 +1,38 @@
+{
+  "lanes": [
+    "Top",
+    "Jungle",
+    "Mid",
+    "ADC",
+    "Support"
+  ],
+  "runas": {
+    "Precisao": [
+      "Pressione o Ataque",
+      "Ritmo Fatal",
+      "Agilidade nos Pés",
+      "Conquistador"
+    ],
+    "Dominacao": [
+      "Eletrocutar",
+      "Predador",
+      "Colheita Sombria",
+      "Chuva de Lâminas"
+    ],
+    "Feiticaria": [
+      "Invocar Aery",
+      "Cometa Arcano",
+      "Ímpeto Gradual"
+    ],
+    "Determinacao": [
+      "Aperto dos Mortos-Vivos",
+      "Pos-Choque",
+      "Guardião"
+    ],
+    "Inspiracao": [
+      "Aprimoramento Glacial",
+      "Livro de Feitiços",
+      "Primeiro Ataque"
+    ]
+  }
+}
