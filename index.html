@@ -1,0 +1,35 @@
+html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Build Aleatória</title>
+</head>
+<body>
+  <h1>Build Aleatória</h1>
+
+  <button onclick="gerarBuild()">Gerar Build</button>
+
+  <p><strong>Lane:</strong> <span id="lane"></span></p>
+  <p><strong>Runa Principal:</strong> <span id="runa"></span></p>
+
+  <script>
+    async function gerarBuild() {
+      const response = await fetch("builds.json");
+      const data = await response.json();
+
+      // Lane aleatória
+      const lane = data.lanes[Math.floor(Math.random() * data.lanes.length)];
+
+      // Árvore de runa aleatória
+      const arvores = Object.keys(data.runas);
+      const arvoreEscolhida = arvores[Math.floor(Math.random() * arvores.length)];
+
+      // Runa aleatória dentro da árvore
+      const runa = data.runas[arvoreEscolhida]
+        [Math.floor(Math.random() * data.runas[arvoreEscolhida].length)];
+
+      document.getElementById("lane").innerText = lane;
+      document.getElementById("runa").innerText = `${arvoreEscolhida} - ${runa}`;
+    }
+  </script>
+</body>
+</html>
